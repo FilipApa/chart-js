@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chart</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <header>
+        <div class="select-container">
+          <div class="select-block">
+            <select class="select-css" id="select-month">
+              <option value="0">Odaberi mesec:</option>
+              <option value="1">Januar</option>
+              <option value="2">Februar</option>
+              <option value="3">Mart</option>
+              <option value="4">April</option>
+              <option value="5">Maj</option>
+              <option value="6">Jun</option>
+              <option value="7">Jul</option>
+              <option value="8">Avgust</option>
+              <option value="9">Septembar</option>
+              <option value="10">Oktobar</option>
+              <option value="11">Novembar</option>
+              <option value="12">Decembar</option>
+            </select>
+          </div>
+
+          <div class="select-block">
+            <select class="select-css" id="select-year">
+              <option value="0">Odaberi godinu:</option>
+            </select>
+          </div>
+          <button class="btn" id="search-btn">Trazi</button>
+        </div>
+        <span class="error" id="error-msg">Trenutno nema podataka</span>
+      </header>
+
+      <main id="main">
+        <canvas class="chart-canvas" id="chart-canvas"></canvas>
+      </main>
+    </div>
+  <script src="js/bundle.js"></script></body>
+</html>
