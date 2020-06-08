@@ -18,8 +18,6 @@ export const renderLoader = (parent) => {
 export const removeLoader = () => {
   const loader = document.querySelector(".loader");
   if (loader) {
-    setTimeout(() => {
-      loader.parentElement.removeChild(loader);
-    }, 800);
+    loader.parentElement.removeChild(loader);
   }
 };
