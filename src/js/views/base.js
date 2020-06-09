@@ -3,8 +3,10 @@ export const elements = {
   selectMonthEl: document.getElementById("select-month"),
   selectYearEl: document.getElementById("select-year"),
   searchBtnEl: document.getElementById("search-btn"),
-  mainEl: document.getElementById("main"),
+  chartSectionEl: document.getElementById("chart-section"),
+  chartTableEl: document.getElementById("chart-table-section"),
   errorMsgEl: document.getElementById("error-msg"),
+  infoValueEl: document.getElementById("info-value"),
 };
 
 export const renderLoader = (parent) => {
@@ -20,4 +22,10 @@ export const removeLoader = () => {
   if (loader) {
     loader.parentElement.removeChild(loader);
   }
+};
+
+export const formatDate = (date) => {
+  date = date.split("-");
+  const formatDate = `${date[2]}.${date[1]}`;
+  return formatDate;
 };

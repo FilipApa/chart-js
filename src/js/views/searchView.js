@@ -6,10 +6,15 @@ export const getInput = (elem) => {
 
 export const clearResults = () => {
   const canvas = document.querySelector("canvas");
+  const table = document.querySelector(".chart-table");
   const chartjsMonitor = document.querySelector(".chartjs-size-monitor");
   if (chartjsMonitor) {
-    elements.mainEl.removeChild(chartjsMonitor);
+    elements.chartSectionEl.removeChild(chartjsMonitor);
   }
 
-  elements.mainEl.removeChild(canvas);
+  if (table) {
+    elements.chartTableEl.removeChild(table);
+  }
+
+  elements.chartSectionEl.removeChild(canvas);
 };

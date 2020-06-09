@@ -34,11 +34,20 @@
           </div>
           <button class="btn" id="search-btn">Trazi</button>
         </div>
+
+        <div class="info-block">
+          <span class="info-title"
+            >Srednja vrednost:<span class="info-value" id="info-value"></span
+          ></span>
+        </div>
         <span class="error" id="error-msg">Trenutno nema podataka</span>
       </header>
 
-      <main id="main">
-        <canvas class="chart-canvas" id="chart-canvas"></canvas>
+      <main>
+        <section id="chart-section">
+          <canvas class="chart-canvas" id="chart-canvas"></canvas>
+        </section>
+        <section id="chart-table-section"></section>
       </main>
     </div>
   </body>

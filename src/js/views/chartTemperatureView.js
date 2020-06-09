@@ -5,7 +5,7 @@ const chartTemeratureView = () => {
     <canvas id="chart-canvas"></canvas>
   `;
 
-  elements.mainEl.insertAdjacentHTML("beforeend", markup);
+  elements.chartSectionEl.insertAdjacentHTML("beforeend", markup);
 };
 
 export default chartTemeratureView;

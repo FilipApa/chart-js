@@ -1,4 +1,5 @@
 import Chart from "chart.js";
+import { formatDate } from "../views/base";
 
 const ChartTemperature = (dataArr) => {
   const chartCanvasEl = document
@@ -7,13 +8,10 @@ const ChartTemperature = (dataArr) => {
   let data = dataArr.map((elem) => elem.stv_t);
 
   let labels = dataArr.map((elem) => elem.datum);
-  labels = labels.map((date) => {
-    date = date.split("-");
-    const formatDate = `${date[2]}.${date[1]}`;
-    return formatDate;
-  });
+  labels = labels.map((date) => formatDate(date));
 
   Chart.defaults.global.defaultFontSize = 16;
+  Chart.defaults.global.defaultFontStyle = "bold";
   new Chart(chartCanvasEl, {
     type: "horizontalBar",
     data: {
