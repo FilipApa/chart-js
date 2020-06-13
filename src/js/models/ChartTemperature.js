@@ -13,22 +13,42 @@ const ChartTemperature = (dataArr) => {
   Chart.defaults.global.defaultFontSize = 16;
   Chart.defaults.global.defaultFontStyle = "bold";
   new Chart(chartCanvasEl, {
-    type: "horizontalBar",
+    type: "line",
     data: {
       labels,
       datasets: [
         {
-          label: "Dnevne temperature vazduha u gasovodu",
+          label: "Dnevne temperature vazduha u gasovodu (C)",
           data,
           backgroundColor: "rgba(59, 153, 252, 0.7)",
         },
       ],
-
       options: {
-        labels: {
-          fontSize: 22,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 200,
+                    max: -100,
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Temperatura (C)'
+                }
+            }],
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString:'Datum'
+                }
+            }]
         },
-      },
+        events: ['mousemove', 'mouseout', 'click', 'touchstart', 'touchmove'],
+        responsive: false,
+        onHover: null,
+        tooltips: {
+          enabled: true,
+        }
+      }
     },
   });
 };
